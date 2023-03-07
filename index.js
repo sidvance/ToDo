@@ -26,3 +26,27 @@ for (let i = 0; i < tasks.length; i++){
 
     console.log(string)
 }
+
+function addTask(task){
+    tasks.push(task)
+}
+
+addTask('clean bathroom')
+console.log(tasks)
+
+//write a function called deleteTask that takes a task name a parameter
+//loop over and remove the task if it is in the array of tasks
+//otherwise, log that task was not in the array
+
+function deleteTask(task){
+    for (let i = 0; i < tasks.length; i++){
+        if(task === tasks[i]){
+            tasks.splice([i], 1)
+            console.log('Task deleted')
+            return
+        }
+    }
+    console.log('That task was not in the array')
+}
+
+deleteTask('clean bathroom')
