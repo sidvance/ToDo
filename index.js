@@ -1,37 +1,17 @@
-let task1 = "Make the bed"
-let task2 = "Go to the gym"
-let task3 = "Do laundry"
+let task1 = {name: 'Make the bed', priority: 'Low', status: false}
+let task2 = {name: 'Go to the gym',priority: 'High', status: false}
+let task3 = {name: 'Do laundry', priority: 'Medium', status: false}
 
-if (task2 === "Make the bed"){
-    console.log("Completed!!!! Yay!!!!!")
-}else{
-    console.log("Honey, you in danger girl")
-}
 
 let tasks = [task1, task2, task3]
 
-//Write a for loop that will print each of the tasks
-//in the task array.
-//Implement the above if statement into that for loop,
-//but only one console.log for each task.
 
-for (let i = 0; i < tasks.length; i++){
-    let string = tasks[i]
-
-    if(tasks[i] === 'Make thhe bed'){
-        string += ": Completed!!! Yay!!!!"
-    }else{
-        string += ": Honey, you in danger girl"
-    }
-
-    console.log(string)
-}
 
 function addTask(task){
     tasks.push(task)
 }
 
-addTask('clean bathroom')
+addTask({name: 'Clean bathroom', priority: 'Low', status: false})
 console.log(tasks)
 
 //write a function called deleteTask that takes a task name a parameter
@@ -40,7 +20,7 @@ console.log(tasks)
 
 function deleteTask(task){
     for (let i = 0; i < tasks.length; i++){
-        if(task === tasks[i]){
+        if(task === tasks[i].name){
             tasks.splice([i], 1)
             console.log('Task deleted')
             return
@@ -49,4 +29,24 @@ function deleteTask(task){
     console.log('That task was not in the array')
 }
 
-deleteTask('clean bathroom')
+deleteTask('Clean bathroom')
+
+console.log(tasks)
+
+
+//Write a for loop that will print each of the tasks
+//in the task array.
+//Implement the above if statement into that for loop,
+//but only one console.log for each task.
+
+// for (let i = 0; i < tasks.length; i++){
+//     let string = tasks[i]
+
+//     if(tasks[i] === 'Make thhe bed'){
+//         string += ": Completed!!! Yay!!!!"
+//     }else{
+//         string += ": Honey, you in danger girl"
+//     }
+
+//     console.log(string)
+// }
