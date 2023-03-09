@@ -7,9 +7,11 @@ let tasks = [task1, task2, task3]
 
 
 
-function addTask(task){
-    tasks.push(task)
-}
+// function addTask(task){
+//     tasks.push(task)
+// }
+
+const addTask = task => {tasks.push(task)}
 
 addTask({name: 'Clean bathroom', priority: 'Low', status: false})
 console.log(tasks)
@@ -18,7 +20,7 @@ console.log(tasks)
 //loop over and remove the task if it is in the array of tasks
 //otherwise, log that task was not in the array
 
-function deleteTask(task){
+const deleteTask = (task) => {
     for (let i = 0; i < tasks.length; i++){
         if(task === tasks[i].name){
             tasks.splice([i], 1)
