@@ -1,4 +1,4 @@
-let task1 = {name: 'Make the bed', priority: 'Low', status: false}
+let task1 = {name: 'Make the bed', priority: 'Low', status: true}
 let task2 = {name: 'Go to the gym',priority: 'High', status: false}
 let task3 = {name: 'Do laundry', priority: 'Medium', status: false}
 
@@ -34,6 +34,16 @@ const deleteTask = (task) => {
 deleteTask('Clean bathroom')
 
 console.log(tasks)
+
+
+const incompleteTasks = tasks.filter(task => task.status === false
+    // if(!task.status){
+    // return true
+    // }else{
+    //     return false
+    // }
+)
+console.log(incompleteTasks)
 
 
 //Write a for loop that will print each of the tasks
